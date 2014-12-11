@@ -1,0 +1,148 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 131072 bytes for E in C:\jdk7u2_64p\jdk7u15\hotspot\src\share\vm\utilities/taskqueue.hpp
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:58), pid=12008, tid=11996
+#
+# JRE version: 7.0_15-b03
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (23.7-b01 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000021fd000):  JavaThread "Unknown thread" [_thread_in_vm, id=11996, stack(0x0000000002520000,0x0000000002620000)]
+
+Stack: [0x0000000002520000,0x0000000002620000]
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000021fd000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=11996, stack(0x0000000002520000,0x0000000002620000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 36352K, used 623K [0x00000000d76b0000, 0x00000000d9f40000, 0x0000000100000000)
+  eden space 31168K, 2% used [0x00000000d76b0000,0x00000000d774bde0,0x00000000d9520000)
+  from space 5184K, 0% used [0x00000000d9a30000,0x00000000d9a30000,0x00000000d9f40000)
+  to   space 5184K, 0% used [0x00000000d9520000,0x00000000d9520000,0x00000000d9a30000)
+ ParOldGen       total 83072K, used 0K [0x0000000086400000, 0x000000008b520000, 0x00000000d76b0000)
+  object space 83072K, 0% used [0x0000000086400000,0x0000000086400000,0x000000008b520000)
+ PSPermGen       total 21248K, used 686K [0x0000000081200000, 0x00000000826c0000, 0x0000000086400000)
+  object space 21248K, 3% used [0x0000000081200000,0x00000000812ab8b8,0x00000000826c0000)
+
+Card table byte_map: [0x0000000005620000,0x0000000005a20000] byte_map_base: 0x0000000005217000
+
+Polling page: 0x0000000000220000
+
+Code Cache  [0x0000000002620000, 0x0000000002890000, 0x0000000005620000)
+ total_blobs=39 nmethods=0 adapters=20 free_code_cache=48889Kb largest_free_block=50062912
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.051 loading class 0x000000000210d760
+Event: 0.052 loading class 0x000000000210d760 done
+Event: 0.052 loading class 0x000000000210d7c0
+Event: 0.052 loading class 0x000000000210d7c0 done
+Event: 0.052 loading class 0x000000000210d7f0
+Event: 0.052 loading class 0x000000000210d7f0 done
+Event: 0.053 loading class 0x000000000210e9b0
+Event: 0.053 loading class 0x000000000210e9b0 done
+Event: 0.053 loading class 0x00000000020c1a10
+Event: 0.053 loading class 0x00000000020c1a10 done
+
+
+Dynamic libraries:
+0x000000013f3e0000 - 0x000000013f413000 	C:\Program Files\Java\jre7\bin\javaw.exe
+0x0000000077020000 - 0x00000000771c9000 	C:\windows\SYSTEM32\ntdll.dll
+0x0000000076da0000 - 0x0000000076ebf000 	C:\windows\system32\kernel32.dll
+0x000007fefd530000 - 0x000007fefd59c000 	C:\windows\system32\KERNELBASE.dll
+0x000007fefd8f0000 - 0x000007fefd9cb000 	C:\windows\system32\ADVAPI32.dll
+0x000007fefec90000 - 0x000007fefed2f000 	C:\windows\system32\msvcrt.dll
+0x000007fefebf0000 - 0x000007fefec0f000 	C:\windows\SYSTEM32\sechost.dll
+0x000007fefea90000 - 0x000007fefebbd000 	C:\windows\system32\RPCRT4.dll
+0x0000000076920000 - 0x0000000076a1a000 	C:\windows\system32\USER32.dll
+0x000007fefd850000 - 0x000007fefd8b7000 	C:\windows\system32\GDI32.dll
+0x000007fefed30000 - 0x000007fefed3e000 	C:\windows\system32\LPK.dll
+0x000007fefd9d0000 - 0x000007fefda99000 	C:\windows\system32\USP10.dll
+0x000007fefbdd0000 - 0x000007fefbfc4000 	C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac\COMCTL32.dll
+0x000007fefec10000 - 0x000007fefec81000 	C:\windows\system32\SHLWAPI.dll
+0x000007fefd8c0000 - 0x000007fefd8ee000 	C:\windows\system32\IMM32.DLL
+0x000007feff220000 - 0x000007feff329000 	C:\windows\system32\MSCTF.dll
+0x000007fefd450000 - 0x000007fefd47f000 	C:\windows\system32\nvinitx.dll
+0x000000000f000000 - 0x000000000f006000 	C:\Program Files\NVIDIA Corporation\CoProcManager\detoured.dll
+0x000007fef9aa0000 - 0x000007fef9ad3000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvd3d9wrapx.dll
+0x000007fefef40000 - 0x000007feff117000 	C:\windows\system32\SETUPAPI.dll
+0x000007fefd770000 - 0x000007fefd7a6000 	C:\windows\system32\CFGMGR32.dll
+0x000007fefee60000 - 0x000007fefef37000 	C:\windows\system32\OLEAUT32.dll
+0x000007fefdaf0000 - 0x000007fefdcf3000 	C:\windows\system32\ole32.dll
+0x000007fefd5a0000 - 0x000007fefd5ba000 	C:\windows\system32\DEVOBJ.dll
+0x000007fef9a70000 - 0x000007fef9a93000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvdxgiwrapx.dll
+0x000000005e710000 - 0x000000005e7e1000 	C:\Program Files\Java\jre7\bin\msvcr100.dll
+0x000000006e7f0000 - 0x000000006ef0f000 	C:\Program Files\Java\jre7\bin\server\jvm.dll
+0x000007fef7ec0000 - 0x000007fef7ec9000 	C:\windows\system32\WSOCK32.dll
+0x000007fefdaa0000 - 0x000007fefdaed000 	C:\windows\system32\WS2_32.dll
+0x000007fefebc0000 - 0x000007fefebc8000 	C:\windows\system32\NSI.dll
+0x000007fefad50000 - 0x000007fefad8b000 	C:\windows\system32\WINMM.dll
+0x00000000771f0000 - 0x00000000771f7000 	C:\windows\system32\PSAPI.DLL
+0x000000006e3b0000 - 0x000000006e3bf000 	C:\Program Files\Java\jre7\bin\verify.dll
+0x000000006d3c0000 - 0x000000006d3e8000 	C:\Program Files\Java\jre7\bin\java.dll
+0x000000006d400000 - 0x000000006d415000 	C:\Program Files\Java\jre7\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=Cp1252 
+java_command: ChessSimulator
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=.;C:\Program Files (x86)\Java\jre7\lib\ext\QTJava.zip
+PATH=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Sent;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\VanDyke Software\Clients\;C:\Program Files\MATLAB\R2012a\runtime\win64;C:\Program Files\MATLAB\R2012a\bin;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\MinGW\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files (x86)\Common Files\Ulead Systems\MPEG;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\PROGRA~2\IVIFOU~1\VISA\WinNT\Bin;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\MiKTeX 2.9\miktex\bin\;C:\OrCAD\OrCAD_10.5_Demo\tools\specctra\bin;C:\OrCAD\OrCAD_10.5_Demo\tools\PSpice\Library;C:\OrCAD\OrCAD_10.5_Demo\tools\Capture;C:\OrCAD\OrCAD_10.5_Demo\tools\bin;C:\OrCAD\OrCAD_10.5_Demo\tools\fet\bin;C:\Program Files (x86)\leJOS NXJ\bin;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\Nmap
+USERNAME=kneislsj
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, ht, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 7971948k(2649176k free), swap 9082596k(4696k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (23.7-b01) for windows-amd64 JRE (1.7.0_15-b03), built on Feb 15 2013 13:43:57 by "java_re" with unknown MS VC++:1600
+
+time: Fri Oct 03 20:32:17 2014
+elapsed time: 0 seconds
+

@@ -1,0 +1,74 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32744 bytes for ChunkPool::allocate
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:222), pid=17484, tid=11752
+#
+# JRE version: 7.0_15-b03
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (23.7-b01 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000d69c000):  JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=11752, stack(0x000000000dea0000,0x000000000dfa0000)]
+
+Stack: [0x000000000dea0000,0x000000000dfa0000]
+
+Current CompileTask:
+C2:   6948   40             ComputerPlayer::getFirstMoveThatCheckmates (39 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000000d6b6000 JavaThread "Service Thread" daemon [_thread_blocked, id=11064, stack(0x000000000e140000,0x000000000e240000)]
+  0x000000000d6a9000 JavaThread "C2 CompilerThread1" daemon [_thread_in_vm, id=15612, stack(0x000000000e000000,0x000000000e100000)]
+=>0x000000000d69c000 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=11752, stack(0x000000000dea0000,0x000000000dfa0000)]
+  0x000000000d69b000 JavaThread "Attach Listener" daemon [_thread_blocked, id=14612, stack(0x000000000dd50000,0x000000000de50000)]
+  0x000000000d69a000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=9964, stack(0x000000000dba0000,0x000000000dca0000)]
+  0x000000000b6b7800 JavaThread "Finalizer" daemon [_thread_blocked, id=11856, stack(0x000000000d3b0000,0x000000000d4b0000)]
+  0x000000000b6af000 JavaThread "Reference Handler" daemon [_thread_blocked, id=16316, stack(0x000000000d550000,0x000000000d650000)]
+  0x000000000013d000 JavaThread "main" [_thread_in_Java, id=13264, stack(0x0000000002280000,0x0000000002380000)]
+
+Other Threads:
+  0x000000000b6a5800 VMThread [stack: 0x000000000d2a0000,0x000000000d3a0000] [id=18164]
+  0x000000000d6be800 WatcherThread [stack: 0x000000000e260000,0x000000000e360000] [id=9664]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 55168K, used 52095K [0x00000000d76b0000, 0x00000000db210000, 0x0000000100000000)
+  eden space 54976K, 94% used [0x00000000d76b0000,0x00000000da97fe58,0x00000000dac60000)
+  from space 192K, 33% used [0x00000000db1b0000,0x00000000db1c0000,0x00000000db1e0000)
+  to   space 128K, 0% used [0x00000000db1f0000,0x00000000db1f0000,0x00000000db210000)
+ ParOldGen       total 83072K, used 416K [0x0000000086400000, 0x000000008b520000, 0x00000000d76b0000)
+  object space 83072K, 0% used [0x0000000086400000,0x0000000086468050,0x000000008b520000)
+ PSPermGen       total 21248K, used 2626K [0x0000000081200000, 0x00000000826c0000, 0x0000000086400000)
+  object space 21248K, 12% used [0x0000000081200000,0x0000000081490bf8,0x00000000826c0000)
+
+Card table byte_map: [0x0000000005380000,0x0000000005780000] byte_map_base: 0x0000000004f77000
+
+Polling page: 0x0000000000110000
+
+Code Cache  [0x0000000002380000, 0x00000000025f0000, 0x0000000005380000)
+ total_blobs=220 nmethods=39 adapters=133 free_code_cache=48660Kb largest_free_block=49798720
+
+Compilation events (10 events):
+Event: 1.030 Thread 0x000000000d6a9000 nmethod 34 0x00000000023fe210 code [0x00000000023fe4a0, 0x00000000023fff20]
+Event: 2.592 Thread 0x000000000d69c000   36             java.util.ArrayList::rangeCheck (22 bytes)
