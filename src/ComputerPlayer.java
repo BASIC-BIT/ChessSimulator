@@ -78,7 +78,7 @@ public abstract class ComputerPlayer extends GamePlayer{
 		List<Double> tradeVals = Collections.synchronizedList(new ArrayList<Double>());
 		for(int i=0;i<moves.size();i++){
 			Move m = moves.get(i);
-			if(depth <= 0 && ( (depth <= 2) ||
+			if(depth <= 5 && ( (depth <= 2) ||
 					((depth <= 4) && (lastTradeVal < -2 || lastTradeVal > 2 ||  depth % 2 == 0 || b.inCheck() || moves.get(i).takingPiece != null)) ||
 					((depth <= 6) && (moves.get(i).takingPiece != null || b.inCheck())))){
 				double offset = 0; //using an offset in case it does something that is considered possibly favorable and unfavorable (such as getting rid of castling options to capture a piece)

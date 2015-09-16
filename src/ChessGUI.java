@@ -3,6 +3,8 @@ import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import javax.swing.*;
 import javax.swing.border.*;
+
+import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -122,8 +124,8 @@ public class ChessGUI implements ActionListener{
                 new EmptyBorder(8,8,8,8),
                 new LineBorder(Color.BLACK)
                 ));
-        // Set the BG to be ochre
-        Color ochre = new Color(204,119,34);
+        // Set the BG 
+        Color ochre = new Color(180,180,180);
         chessBoard.setBackground(ochre);
         JPanel boardConstrain = new JPanel(new GridBagLayout());
         boardConstrain.setBackground(ochre);
@@ -203,7 +205,8 @@ public class ChessGUI implements ActionListener{
 
     private final void createImages() {
         try {
-            URL url = new URL("http://i.stack.imgur.com/memI0.png");
+            //URL url = new URL("http://i.stack.imgur.com/memI0.png");
+            URL url = getClass().getResource("/pieces.png");
             BufferedImage bi = ImageIO.read(url);
             for (int ii = 0; ii < 2; ii++) {
                 for (int jj = 0; jj < 6; jj++) {
